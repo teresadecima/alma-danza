@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/*!-----HEADER-----*/
+
+header h1 {
+    font-style: normal;
+    text-align: center;
+}
+
+header h1 img {
+    width: 280px;
+    height: 100px;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*----MAIN----*/
+
+main section nav ul {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+header nav ul li {
+    margin: 5px 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    display: inline-block;
+
+}
+
+section h2 {
+    height: 30vh;
+    background-image: url(../img/profesores.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+section p {
+    text-align: center;
+    font-size: 25px;
+}
+
+/*?-----FOOTER-----*/
+
+footer a img {
+    width: 100x;
+    height: 100px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*-----CLASES-----*/
+
+.tarjeta {
+    border: 1px solid black;
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.botonhorarios {
+    margin-top: auto;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contacto {
+    text-align: center;
+    background-color: white;
+}
+
+.video {
+    text-align: center;
+}
+
+.mapa {
+    text-align: center;
+    background-color: rgb(239, 219, 240);
+    font-size: 25px;
+    color: black;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.direccion {
+    flex: 1;
+    background-color: rgb(239, 219, 240);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.h4mapa {
+    text-align: center;
+    background-color: rgb(239, 219, 240);
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+}
+
+footer h3 {
+    height: 5vh;
+}
+
+.urbano {
+    height: 50vh;
+    background-image: url(../img/urbano.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.arabe {
+    height: 50vh;
+    background-image: url(../img/arabe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.jazz {
+    height: 50vh;
+    background-image: url(../img/jazz.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.equipo {
+    height: 50vh;
+    background-image: url(../img/equipo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.horarios {
+    background-color: rgb(239, 219, 240);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+
+}
+
+.botones {
+    text-align: right;
+    text-decoration: none;
+}
+
+.nuestrasclases {
+    text-align: center;
+    background-color: rgb(239, 219, 240);
+    font-size: 25px;
+    color: black;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+}
+
+
+/*------GRIDS-----*/
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.imagen-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 5px palevioletred;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.imagen-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imagen-grid h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*?-----GRID IMG 1 COLUMNA, 2  FILAS-----*/
+
+.imagen-grid1 {
+    grid-row: span 2;
+}
+
+.imagen-grid1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 5px palevioletred;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.imagen-grid1 img {
+    width: 100%;
+    height: 680px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imagen-grid1 h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*-----PSEUDOCLASES--------------*/
+
+.horarios a:hover {
+    background-color: palevioletred;
+}
+
+.horarios a:active {
+    background-color: purple;
+}
+
+main section h3:hover {
+    background-color: palevioletred;
+    font-style: italic;
+    color: white;
+}
+
+main section h2:hover {
+    background-color: palevioletred;
+    font-style: italic;
+}
+
+.contacto h4:hover {
+    background-color: palevioletred;
+    font-style: italic;
+}
+
+header nav ul li:hover {
+    background-color: palevioletred;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+/*?-----------PSEUDOELEMENTOS--------------?*/
+
+main section h3::first-letter {
+    color: black;
+}
+
+p::selection {
+    background-color: palevioletred;
+    color: white;
+}
+
+/*?-------------BOOTSTRAP-----------?*/
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    z-index: 100;
+}
+
+.carousel-caption H4 {
+    color: palevioletred;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.carousel-caption p {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*!----------MEDIA QUERY---------!*/
+
+@media screen and (max-width:900px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .botones ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .botones li {
+        margin: 8px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imagen-grid {
+        width: 100%;
+    }
+
+    section h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width:670px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .imagen-grid {
+        width: 100%;
+        height: auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .mapa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .direccion {
+        width: 100%;
+        text-align: center;
+        align-items: 20px;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .imagen-grid {
+        width: 100%;
+        height: auto;
+    }
+
+}
