@@ -427,6 +427,11 @@ p::selection {
         height: auto;
     }
 
+    .equipo {
+        width: auto;
+        height: 100;
+    }
+
     iframe {
         width: 100%;
         height: auto;
