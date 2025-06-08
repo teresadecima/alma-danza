@@ -10,6 +10,7 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+
 /*!-----HEADER-----*/
 
 header h1 {
@@ -339,6 +340,17 @@ header nav ul li a:hover {
     font-weight: bold;
 }
 
+.dropdown-item:hover {
+    background-color: palevioletred;
+    color: white !important;
+}
+
+.dropdown-item:focus {
+    background-color: palevioletred;
+    color: white !important;
+}
+
+
 /*?-----------PSEUDOELEMENTOS--------------?*/
 
 main section h3::first-letter {
@@ -370,6 +382,29 @@ p::selection {
     font-size: 25px;
     font-weight: bold;
     font-style: italic;
+}
+
+.container-fluid {
+    background-color: white;
+}
+
+.navbar {
+    background-color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.dropdown-menu {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+.dropdown-item {
+    border-radius: 30px;
+    margin: 5px;
+    color: black;
 }
 
 /*!----------MEDIA QUERY---------!*/
