@@ -1,0 +1,58 @@
+//*VARIABLES - Asignacion de un valor
+
+$color-principal: palevioletred;
+$color-secundario: rgb(239, 219, 240);
+
+//*EXTENDS
+
+%boton {
+    margin-top: auto;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+//*LISTA - Para agrupar valores a un solo elemento
+
+    $colores:
+    rgb(169, 101, 160),
+    rgb(137, 7, 144),  
+    palevioletred,
+    pink,
+    black;
+
+    $font-size:
+    10px,
+    15px,
+    20px,
+    25px,
+    50px;
+    
+//*MIXIN - Agrupan propiedades
+
+@mixin flex($flex, $justify, $aling){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $aling;
+}
+
+@mixin font-size($size, $weight, $style){
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin background($size, $repeat, $position, $attachment){
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+    background-attachment: $attachment;
+}
+
+
+
+
+

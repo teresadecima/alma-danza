@@ -70,6 +70,26 @@ section h2 {
     color: white;
 }
 
+h2 {
+    animation-name: slidein;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+/*!KEYFRAME */
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
 section p {
     text-align: center;
     font-size: 25px;
@@ -80,13 +100,6 @@ section p {
 footer a img {
     width: 100x;
     height: 100px;
-}
-
-footer ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
 }
 
 /*-----CLASES-----*/
@@ -104,6 +117,7 @@ footer ul li a {
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
+    transition: 1s;
 }
 
 .tarjeta img {
@@ -122,6 +136,7 @@ footer ul li a {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .contacto {
@@ -212,7 +227,8 @@ footer h3 {
 }
 
 .horarios {
-    background-color: rgb(239, 219, 240);
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(230, 216, 235, 1) 100%);
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -266,6 +282,7 @@ footer h3 {
     height: 300px;
     object-fit: cover;
     object-position: center;
+    
 }
 
 .imagen-grid h3 {
@@ -340,6 +357,11 @@ header nav ul li a:hover {
     font-weight: bold;
 }
 
+.tarjeta:hover {
+    transform: scale(1.1);
+    box-shadow: 20px 10px 19px 0px palevioletred;
+}
+
 .dropdown-item:hover {
     background-color: palevioletred;
     color: white !important;
@@ -399,6 +421,7 @@ p::selection {
     border: none;
     box-shadow: none;
     text-align: center;
+
 }
 
 .dropdown-item {
