@@ -1,7 +1,7 @@
 //*VARIABLES - Asignacion de un valor
 
 $color-principal: #d6a921;
-$color-secundario:  #f4e1a7;
+$color-secundario: #f4e1a7;
 
 //*EXTENDS
 
@@ -17,42 +17,35 @@ $color-secundario:  #f4e1a7;
 
 //*LISTA - Para agrupar valores a un solo elemento
 
-    $colores:
-    rgb(169, 101, 160),
-    rgb(137, 7, 144),  
-    palevioletred,
-    pink,
+$colores: 
+    #d6a921,
+    #f4e1a7,
+    #D6A821
     black;
 
-    $font-size:
-    10px,
+$font-size: 10px,
     15px,
     20px,
     25px,
     50px;
-    
+
 //*MIXIN - Agrupan propiedades
 
-@mixin flex($flex, $justify, $aling){
+@mixin flex($flex, $justify, $aling) {
     display: $flex;
     justify-content: $justify;
     align-items: $aling;
 }
 
-@mixin font-size($size, $weight, $style){
+@mixin font-size($size, $weight, $style) {
     font-size: $size;
     font-weight: $weight;
     font-style: $style;
 }
 
-@mixin background($size, $repeat, $position, $attachment){
+@mixin background($size, $repeat, $position, $attachment) {
     background-size: $size;
     background-repeat: $repeat;
     background-position: $position;
     background-attachment: $attachment;
 }
-
-
-
-
-
