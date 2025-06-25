@@ -426,9 +426,9 @@ footer ::selection {
     color: white;
 }
 
-footer {
-    line-height: 1.2;
-    /* más compacto que el valor por defecto */
+h3::selection {
+    background-color: #d6a921;
+    color: white;
 }
 
 /*?-------------BOOTSTRAP-----------?*/
