@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .tarjeta a, .botonhorarios {
   margin-top: auto;
   margin-bottom: 10px;
@@ -8,21 +9,23 @@
   border-radius: 5px;
 }
 
-h2 {
-  animation-name: slidein;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
+/*!KEYFRAME */
+.texto2 {
+  animation: aparecer 6s ease-in-out;
 }
 
-/*!KEYFRAME */
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
+.imagen-animada {
+  animation: aparecer 8s ease-in-out;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  to {
-    margin-left: 0;
-    width: 100%;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .urbano {
@@ -73,8 +76,17 @@ h2 {
   color: white;
 }
 
+.nuestrasclases {
+  text-align: center;
+  background-color: #f4e1a7;
+  font-size: 25px;
+  color: black;
+  padding: 20px;
+  margin: 20px 0px 20px 0px;
+}
+
 .horarios {
-  background-color: rgb(239, 219, 240);
+  background-color: #D6A821;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -82,10 +94,10 @@ h2 {
   padding: 20px;
 }
 .horarios a:hover {
-  background-color: palevioletred;
+  background-color: #d6a921;
 }
 .horarios a:hover:active {
-  background-color: purple;
+  background-color: #d6a921;
 }
 
 .tarjeta {
@@ -104,7 +116,7 @@ h2 {
 }
 .tarjeta :hover {
   transform: scale(1.1);
-  box-shadow: 20px 10px 19px 0px palevioletred;
+  box-shadow: 20px 10px 19px 0px #d6a921;
 }
 .tarjeta img {
   width: 100%;
@@ -124,13 +136,17 @@ h2 {
   text-decoration: none;
 }
 
-.nuestrasclases {
+.contacto {
   text-align: center;
-  background-color: rgb(239, 219, 240);
-  font-size: 25px;
-  color: black;
-  padding: 20px;
-  margin: 20px 0px 20px 0px;
+  background-color: white;
+}
+.contacto h4:hover {
+  background-color: #D6A821;
+  font-style: italic;
+}
+.contacto::selection {
+  background-color: #d6a921;
+  color: white;
 }
 
 .carousel-item img {
@@ -139,7 +155,7 @@ h2 {
   z-index: 100;
 }
 .carousel-item img caption H4 {
-  color: palevioletred;
+  color: #D6A821;
   font-size: 30px;
   font-weight: bold;
   font-style: italic;
@@ -169,6 +185,42 @@ h2 {
   color: black;
 }
 
+.principal {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+.principal .texto1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.principal .texto2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.principal .texto2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1005px) {
+  .principal {
+    flex-direction: column;
+    text-align: center;
+  }
+  .texto1,
+  .texto2 {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 900px) {
   header {
     flex-direction: column;
@@ -217,15 +269,6 @@ h2 {
     width: 100%;
     height: auto;
   }
-  .mapa {
-    flex-direction: column;
-    align-items: center;
-  }
-  .direccion {
-    width: 100%;
-    text-align: center;
-    align-items: 20px;
-  }
 }
 @media screen and (max-width: 350px) {
   .galeria-grid {
@@ -237,6 +280,10 @@ h2 {
     height: auto;
   }
 }
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 header {
   background-color: white;
   padding: 10px;
@@ -252,8 +299,44 @@ header h1 {
   text-align: center;
 }
 header img {
-  width: 280px;
-  height: 100px;
+  width: 230px;
+  height: 95px;
+}
+
+main h2 {
+  height: 90vh;
+  background-image: url(../img/profesores.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  font-size: 50px;
+  color: #d6a821;
+}
+main h2:hover {
+  background-color: black;
+  font-style: italic;
+}
+main h2:hover::selection {
+  background-color: #d6a921;
+  color: white;
+}
+main p {
+  text-align: center;
+  font-size: 20px;
+}
+main p::selection {
+  background-color: #d6a921;
+  color: white;
+}
+main h3 {
+  height: 5vh;
+}
+main h3:hover {
+  background-color: #d6a921;
+  font-style: italic;
+  color: white;
 }
 
 nav ul {
@@ -269,7 +352,7 @@ nav ul li {
   display: inline-block;
 }
 nav ul li:hover {
-  background-color: palevioletred;
+  background-color: #d6a921;
   color: white;
   font-weight: bold;
 }
@@ -283,129 +366,77 @@ nav ul li:hover a:hover {
   color: white;
   font-weight: bold;
 }
-nav ul li main h2 {
-  height: 30vh;
-  background-image: url(../img/profesores.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  text-align: center;
-  font-size: 50px;
-  color: white;
-}
-nav ul li main h2 :hover {
-  background-color: palevioletred;
-  font-style: italic;
-}
-nav ul li main h2 p {
-  text-align: center;
-  font-size: 25px;
-}
-nav ul li main h2 p::selection {
-  background-color: palevioletred;
-  color: white;
-}
-nav ul li main h2 h3 {
-  height: 5vh;
-}
-nav ul li main h2 h3 :hover {
-  background-color: palevioletred;
-  font-style: italic;
-  color: white;
-}
-nav ul li .galeria-grid {
+
+.galeria-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
 }
-nav ul li .galeria-grid .imagen-grid {
+.galeria-grid .imagen-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px #d6a921;
+  overflow: hidden;
+  background-color: #fff;
+}
+.galeria-grid .imagen-grid img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   object-position: center;
 }
-nav ul li .galeria-grid .imagen-grid .imagen-grid img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-}
-nav ul li .galeria-grid .imagen-grid .imagen-grid h3 {
+.galeria-grid .imagen-grid h3 {
   margin: 10px 0;
   font-size: 18px;
   text-align: center;
 }
-nav ul li .imagen-grid1 {
+.galeria-grid .imagen-grid h3::selection {
+  background-color: #d6a921;
+  color: white;
+}
+.galeria-grid .imagen-grid1 {
   grid-row: span 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 5px palevioletred;
-  border-radius: 40px;
+  border: solid 1px #d6a921;
   overflow: hidden;
   background-color: #fff;
 }
-nav ul li .imagen-grid1 .imagen-grid1 img {
+.galeria-grid .imagen-grid1 img {
   width: 100%;
   height: 680px;
   object-fit: cover;
   object-position: center;
 }
-nav ul li .imagen-grid1 .imagen-grid1 h3 {
+.galeria-grid .imagen-grid1 h3 {
   margin: 10px 0;
   font-size: 18px;
   text-align: center;
 }
-nav ul li footer h3 {
-  height: 5vh;
+.galeria-grid .imagen-grid1 h3::selection {
+  background-color: #d6a921;
+  color: white;
 }
-nav ul li footer img {
-  width: 100x;
-  height: 100px;
+
+.testimonio::selection {
+  background-color: #d6a921;
+  color: white !important;
 }
-nav ul li .contacto {
+
+footer section p {
   text-align: center;
-  background-color: white;
+  font-size: 20px;
 }
-nav ul li .contacto h4:hover {
-  background-color: palevioletred;
-  font-style: italic;
+footer section p::selection {
+  background-color: #d6a921;
+  color: white;
 }
-nav ul li .nuestrasclases {
-  text-align: center;
-  background-color: rgb(239, 219, 240);
-  font-size: 25px;
-  color: black;
-  padding: 20px;
-  margin: 20px 0px 20px 0px;
-}
-nav ul li .video {
-  text-align: center;
-}
-nav ul li .h4mapa {
-  text-align: center;
-  background-color: rgb(239, 219, 240);
-  padding: 20px;
-  margin: 20px 0px 20px 0px;
-}
-nav ul li .mapa {
-  text-align: center;
-  background-color: rgb(239, 219, 240);
-  font-size: 25px;
-  color: black;
-  padding: 20px;
-  margin: 20px 0px 20px 0px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-nav ul li .direccion {
-  flex: 1;
-  background-color: rgb(239, 219, 240);
-  padding: 20px;
-  box-sizing: border-box;
+footer section p:hover {
+  background-color: #d6a921;
+  color: white;
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -17,17 +17,18 @@ $color-secundario: #f4e1a7;
 
 //*LISTA - Para agrupar valores a un solo elemento
 
-$colores: 
-    #d6a921,
+$colores: #d6a921,
     #f4e1a7,
-    #D6A821
-    black;
+    #D6A821,
+    black,
+    white;
 
-$font-size: 10px,
+$font-size: (10px,
     15px,
     20px,
     25px,
-    50px;
+    50px
+);
 
 //*MIXIN - Agrupan propiedades
 
@@ -48,4 +49,26 @@ $font-size: 10px,
     background-repeat: $repeat;
     background-position: $position;
     background-attachment: $attachment;
+}
+
+/*!KEYFRAME */
+
+.texto2 {
+    animation: aparecer 6s ease-in-out;
+}
+
+.imagen-animada {
+    animation: aparecer 8s ease-in-out;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

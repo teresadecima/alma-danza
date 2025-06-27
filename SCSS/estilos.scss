@@ -1,6 +1,11 @@
 @import "./base/funcionalidades";
 @import "./base/generales";
 @import "./base/querys";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
 
 header {
     background-color: white;
@@ -10,17 +15,60 @@ header {
     top: 0;
     @include flex (flex, space-between, center);
 
-
     h1 {
         font-style: normal;
         text-align: center;
     }
 
     img {
-        width: 280px;
-        height: 100px;
+        width: 230px;
+        height: 95px;
     }
 
+}
+
+main {
+    h2 {
+        height: 90vh;
+        background-image: url(../img/profesores.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        text-align: center;
+        font-size: 50px;
+        color: #d6a821;
+
+        &:hover {
+            background-color: nth($colores, 4);
+            font-style: italic;
+
+            &::selection {
+                background-color: #d6a921;
+                color: white;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 20px;
+
+        &::selection {
+            background-color: $color-principal;
+            color: white;
+        }
+    }
+
+    h3 {
+        height: 5vh;
+
+        &:hover {
+            background-color: $color-principal;
+            font-style: italic;
+            color: white;
+        }
+    }
 }
 
 nav ul {
@@ -52,161 +100,96 @@ nav ul {
                 }
             }
         }
+    }
+}
 
-        main {
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
 
-            h2 {
-                height: 30vh;
-                background-image: url(../img/profesores.jpg);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-                text-align: center;
-                font-size: 50px;
+    .imagen-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px #d6a921;
+        overflow: hidden;
+        background-color: #fff;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            text-align: center;
+
+            &::selection {
+                background-color: $color-principal;
                 color: white;
-
-                & :hover {
-                    background-color: nth($colores, 3);
-                    font-style: italic;
-                }
-
-                p {
-                    text-align: center;
-                    font-size: 25px;
-
-                    &::selection {
-                        background-color: $color-principal;
-                        color: white;
-                    }
-                }
-
-                h3 {
-                    height: 5vh;
-
-                    & :hover {
-                        background-color: $color-principal;
-                        font-style: italic;
-                        color: white;
-                    }
-
-                }
             }
         }
+    }
 
-        .galeria-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
 
-            .imagen-grid {
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                object-position: center;
+    .imagen-grid1 {
+        grid-row: span 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px $color-principal;
+        overflow: hidden;
+        background-color: #fff;
 
-                .imagen-grid img {
-                    width: 100%;
-                    height: 300px;
-                    object-fit: cover;
-                    object-position: center;
-                }
-
-                .imagen-grid h3 {
-                    margin: 10px 0;
-                    font-size: 18px;
-                    text-align: center;
-                }
-            }
+        img {
+            width: 100%;
+            height: 680px;
+            object-fit: cover;
+            object-position: center;
         }
 
-        .imagen-grid1 {
-            grid-row: span 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: solid 5px $color-principal;
-            border-radius: 40px;
-            overflow: hidden;
-            background-color: #fff;
-
-            .imagen-grid1 img {
-                width: 100%;
-                height: 680px;
-                object-fit: cover;
-                object-position: center;
-            }
-
-            .imagen-grid1 h3 {
-                margin: 10px 0;
-                font-size: 18px;
-                text-align: center;
-            }
-        }
-
-        footer {
-
-            h3 {
-                height: 5vh;
-            }
-
-            img {
-                width: 100x;
-                height: 100px;
-            }
-
-        }
-
-        .contacto {
+        h3 {
+            margin: 10px 0;
+            font-size: 18px;
             text-align: center;
-            background-color: white;
 
-            & h4:hover {
-                background-color: nth($colores, 3);
-                font-style: italic;
+            &::selection {
+                background-color: $color-principal;
+                color: white;
             }
 
         }
+    }
+}
 
-        .nuestrasclases {
-            text-align: center;
-            background-color: $color-secundario;
-            font-size: nth($font-size, 4);
-            color: nth($colores, 5);
-            padding: 20px;
-            margin: 20px 0px 20px 0px;
+.testimonio::selection {
+    background-color: #d6a921;
+    ;
+    color: white !important;
+}
+
+footer {
+
+    section p {
+        text-align: center;
+        font-size: 20px;
+
+        &::selection {
+            background-color: #d6a921;
+            ;
+            color: white;
         }
 
-        .video {
-            text-align: center;
+        &:hover {
+            background-color: #d6a921;
+            ;
+            color: white;
+            ;
         }
-
-        .h4mapa {
-            text-align: center;
-            background-color: $color-secundario;
-            padding: 20px;
-            margin: 20px 0px 20px 0px;
-        }
-
-        .mapa {
-            text-align: center;
-            background-color:$color-secundario;
-            font-size: 25px;
-            color: black;
-            padding: 20px;
-            margin: 20px 0px 20px 0px;
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .direccion {
-            flex: 1;
-            background-color: $color-secundario;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
     }
 }
